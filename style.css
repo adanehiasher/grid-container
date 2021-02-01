@@ -1,0 +1,57 @@
+*,
+*::before,
+*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body,
+html{
+    font-family: 'Poppins', sans-serif;
+    background: white;
+}
+.grid-container{
+    padding: 3rem 5rem;
+}
+.grid-header{
+    font-size: 4rem;
+    text-transform: uppercase;
+    font-weight: lighter;
+    line-height: 1.4;
+}
+.grid-link-container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin-top: 2rem;
+}
+.grid-level-one,
+.grid-level-two,
+.grid-level-three{
+    display: grid;
+    grid-row-gap: 30px;
+}
+.grid-text{
+    color: rgb(6,33,45,1)
+}
+.grid-link{
+    text-decoration: none;
+    color: rgb(6,33,45,1)
+}
+.grid-link:hover{
+    text-decoration: underline;
+}
+
+@media only screen and (max-width: 480px){
+    .grid-header{
+        font-size: 2rem;
+        text-align: center;
+    }
+    .grid-link-container{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        margin-top: 2rem;
+        grid-gap: 5rem;
+        justify-items: center;
+        align-items: center;
+    }
+}
